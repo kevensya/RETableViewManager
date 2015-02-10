@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   s.authors     = { 'Roman Efimov' => 'romefimov@gmail.com' }
   s.homepage    = 'https://github.com/romaonthego/RETableViewManager'
   s.summary     = 'Powerful data driven content manager for UITableView.'
-  s.source      = { :git => 'https://github.com/romaonthego/RETableViewManager.git',
+  s.source      = { :git => 'https://github.com/kevensya/RETableViewManager.git',
                     :tag => s.version.to_s }
   s.license     = { :type => "MIT", :file => "LICENSE" }
 
@@ -17,6 +17,6 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '7.0'
 
-  s.dependency 'REFormattedNumberField', '~> 1.1.5'
+  s.dependency 'REFormattedNumberField', '~> 1.1.5', :git => 'https://github.com/kevensya/REFormattedNumberField.git'
   s.dependency 'REValidation', '~> 0.1.4'
 end
