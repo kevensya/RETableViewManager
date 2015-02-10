@@ -17,6 +17,6 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '7.0'
 
-  s.dependency 'REFormattedNumberField', '~> 1.1.5', :git => 'https://github.com/kevensya/REFormattedNumberField.git'
+  s.dependency 'REFormattedNumberField', :git => 'https://github.com/kevensya/REFormattedNumberField.git'
   s.dependency 'REValidation', '~> 0.1.4'
 end
