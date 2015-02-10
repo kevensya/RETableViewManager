@@ -17,6 +17,6 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '7.0'
 
-  s.dependency 'REFormattedNumberField', :podspec => 'https://github.com/kevensya/REFormattedNumberField/blob/master/REFormattedNumberField.podspec'
+  # s.dependency 'REFormattedNumberField', :podspec => 'https://github.com/kevensya/REFormattedNumberField/blob/master/REFormattedNumberField.podspec'
   s.dependency 'REValidation', '~> 0.1.4'
 end
