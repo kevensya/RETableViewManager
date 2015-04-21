@@ -47,6 +47,7 @@
 - (void)dealloc {
     if (_item != nil) {
         [_item removeObserver:self forKeyPath:@"enabled"];
+        [_item removeObserver:self forKeyPath:@"readonly"];
     }
 }
 
@@ -121,11 +122,13 @@
 {
     if (_item != nil) {
         [_item removeObserver:self forKeyPath:@"enabled"];
+        [_item removeObserver:self forKeyPath:@"readonly"];
     }
     
     _item = item;
     
     [_item addObserver:self forKeyPath:@"enabled" options:NSKeyValueObservingOptionNew context:NULL];
+    [_item addObserver:self forKeyPath:@"readonly" options:NSKeyValueObservingOptionNew context:NULL];
 }
 
 - (void)setEnabled:(BOOL)enabled {
@@ -143,6 +146,13 @@
         BOOL newValue = [[change objectForKey: NSKeyValueChangeNewKey] boolValue];
         
         self.enabled = newValue;
+    }
+    
+    if ([keyPath isEqualToString:@"readonly"]) {
+        BOOL newValue = [[change objectForKey:NSKeyValueChangeNewKey] boolValue];
+        
+        self.textLabel.enabled = newValue;
+        self.textField.enabled = newValue;
     }
 }
 

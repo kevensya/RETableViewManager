@@ -39,6 +39,7 @@
 
 @property (assign, readwrite, nonatomic) NSUInteger charactersLimit;                   // characters limit
 
+@property (assign, readwrite, nonatomic) BOOL readonly;
 
 // Keyboard
 //
